@@ -1,0 +1,12 @@
+import os
+from pathlib import Path
+path = []
+name = []
+abc = {}
+
+for root, dirs, files in os.walk(os.path.abspath(mypath)):
+    for file in files:
+        path.append(os.path.join(root, file))                
+        name.append(Path(file).stem)
+abc = dict(zip(path, name))
+print(abc)
